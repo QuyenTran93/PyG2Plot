@@ -23,8 +23,10 @@
   <div id="{{ plot.plot_id }}" class="pyg2plot-plot-container"></div>
 
   <script>
-    var plot_{{ plot.plot_id }} = new G2Plot.{{plot.plot_type}}("{{ plot.plot_id }}", {{ plot.js_options }}); 
-    plot_{{ plot.plot_id }}.render();
+    setTimeout(function() {
+      var plot_{{ plot.plot_id }} = new G2Plot.{{plot.plot_type}}("{{ plot.plot_id }}", {{ plot.js_options }}); 
+      plot_{{ plot.plot_id }}.render();
+    }, 0);
   </script>
 </body>
 </html>
